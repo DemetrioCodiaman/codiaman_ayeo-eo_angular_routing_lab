@@ -7,22 +7,19 @@ import { ContactComponent } from './contact/contact.component';
 import { adminGuard } from './admin/admin.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-   { path: 'home', component: HomeComponent },
-   { path: 'about', component: AboutComponent, children: [
-     { path: 'profile', component: ProfileComponent }
-   ]},
-   { path: 'contact', component: ContactComponent },
-   { 
-    path: 'admin', 
-    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule), 
-    canActivate: [adminGuard] 
-  }
- ];
-
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'home', component: HomeComponent },
+    { path: 'about', component: AboutComponent, children: [
+      { path: 'profile', component: ProfileComponent }
+    ]},
+    { path: 'contact', component: ContactComponent },
+    { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) }
+  ];
+ 
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
