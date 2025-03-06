@@ -2,10 +2,17 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  imports: [],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  user = {
+    name: 'John Doe',
+    description: 'Discover amazing products and experiences.'
+  };
 
+  navigateToAbout() {
+    console.log('Navigating to About Page...');
+    // You can use Angular Router here
+  }
 }

@@ -1,3 +1,20 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5dc; /* Beige */
+    min-height: 100vh; /* Add this to make the footer stick to the bottom */
+    margin: 0;
+    padding: 0;
+  }
+  
+
 .header {
     background-color: #8b9467; /* Earthy green */
     padding: 1rem;
@@ -34,3 +51,16 @@
     color: #ffffff; /* White */
     border-bottom: 2px solid #ffffff; /* White */
   }
+
+  /* Main Content Styles */
+
+.container {
+    max-width: 1200px; /* Increase this value as needed */
+    margin: 40px auto; 
+    padding: 20px; 
+    background-color: #ffffff; /* White */
+    border: 1px solid #dddddd; /* Light gray */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  }
+
+  
