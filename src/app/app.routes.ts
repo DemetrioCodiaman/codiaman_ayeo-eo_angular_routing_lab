@@ -5,7 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { ProfileComponent } from './about/profile/profile.component';
 import { ContactComponent } from './contact/contact.component';
 import { NgModule } from '@angular/core';
-import path from 'path';
+
 
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
