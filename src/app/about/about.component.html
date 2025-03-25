@@ -1,0 +1,61 @@
+<router-outlet></router-outlet>
+<div class="d-flex justify-content-center align-items-center vh-100 flex-column position-relative" 
+     style="background: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ25lcTI1Zm45eXRmeXRrc3JtNG10cjB1aGJ0Z2F6N2ZwcHl2MHZhMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7FrOU9tPbgAZtxV5mb/giphy.gif') no-repeat center center; background-size: cover;">
+  
+  <div class="position-absolute top-0 start-0 w-100 h-100" 
+       style="backdrop-filter: blur(6px); background: rgba(0, 0, 0, 0.3);">
+  </div>
+
+  <div class="d-flex gap-3 flex-wrap justify-content-center position-relative" style="max-width: 900px;">
+      <div class="card" style="width: 18rem;">
+          <img src="https://th.bing.com/th/id/OIP.arykoRiESIEvXB3_9dKAhwHaE6?w=247&h=180&c=7&r=0&o=5&pid=1.7" class="card-img-top" alt="App Development">
+          <div class="card-body">
+              <h5 class="card-title">APPDEV</h5>
+              <p class="card-text">App development is the process of planning, designing, developing, and testing software applications to address business needs and deliver better customer experiences.</p>
+          </div>
+          <div class="card-footer text-muted text-center">
+              <h1>{{pageTitle}}</h1>
+            <p>Current time: {{ currentTime }}</p>
+            <img [src]="imageUrl" [alt]="'Angular Logo'">
+            <button [disabled]="isDisabled">Click Me</button>
+          </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+          <img src="https://media.giphy.com/media/2IudUHdI075HL02Pkk/giphy.gif?cid=790b7611imzypyuth2174ajf3gz5dmzcbkmju9levyiocxpj&ep=v1_gifs_search&rid=giphy.gif&ct=g" class="card-img-top" alt="Computer Programming">
+          <div class="card-body">
+              <h5 class="card-title">Computer Programming</h5>
+              <p class="card-text">Computer programming is the process that professionals use to write code that instructs how a computer, application, or software program performs.</p>
+          </div>
+          <div class="card-footer text-muted text-center">
+            <button (click)="incrementCount()">Clicks: {{ clickCount }}</button>
+            <input (input)="onInput($event)" placeholder="Type something...">
+          </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+          <img src="https://th.bing.com/th/id/OIP.AUDg2tdGLLVnaYTYaWmaegAAAA?w=265&h=180&c=7&r=0&o=5&pid=1.7" class="card-img-top" alt="Software Developer">
+          <div class="card-body">
+              <h5 class="card-title">Software Developer</h5>
+              <p class="card-text">Software developers design, program, build, deploy, and maintain software using many different skills and tools.</p>
+          </div>
+          <div class="example-card">
+            <form (submit)="submitForm(); $event.preventDefault();">
+            <div class="form-group">
+            <label for="name">Name:</label>
+            <input id="name" [(ngModel)]="name" name="name" placeholder="Enter your name">
+            <p>Hello, {{ name || 'stranger' }}!</p>
+            </div>
+            <div class="form-group">
+            <label for="email">Email:</label>
+            <input id="email" [(ngModel)]="email" name="email"
+            placeholder="Enter your email">
+            <p>Your email is: {{ email || 'not provided' }}</p>
+            </div>
+            <div class="form-actions">
+            <button type="submit">Submit</button>
+            <button type="button" (click)="resetForm()">Reset</button>
+            </div>
+            </form>
+            </div>
+      </div>
+  </div>
+</div>
