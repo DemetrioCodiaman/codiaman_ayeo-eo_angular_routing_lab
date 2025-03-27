@@ -1,0 +1,28 @@
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Ensure it stays at the bottom */
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  footer nav ul li {
+    display: inline;
+    margin-right: 15px;
+  }
+  
+  footer nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer nav ul li a:hover {
+    text-decoration: underline;
+  }

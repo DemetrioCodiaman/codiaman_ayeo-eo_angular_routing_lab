@@ -1,0 +1,30 @@
+aside {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-right: 1px solid #dee2e6;
+    height: 100vh; /* Full height */
+    position: fixed; /* Fixed sidebar */
+    width: 200px; /* Set a width */
+  }
+  
+  aside h2 {
+    font-size: 1.5em;
+  }
+  
+  aside ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  aside ul li {
+    margin: 10px 0;
+  }
+  
+  aside ul li a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  aside ul li a:hover {
+    text-decoration: underline;
+  }

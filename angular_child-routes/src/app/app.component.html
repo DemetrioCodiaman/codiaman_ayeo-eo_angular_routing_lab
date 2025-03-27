@@ -1,0 +1,43 @@
+<h1>Demetrio L. Codiaman</h1>
+<img [src]="imageURL" [alt]="">
+<nav>
+  <a routerLink="/parent" routerLinkActive="active">Parent</a> |
+  <a routerLink="/parent/child-one" routerLinkActive="active">Child One</a> |
+  <a routerLink="/parent/child-two" routerLinkActive="active">Child Two</a> |
+  <a routerLink="/admin" routerLinkActive="active">Admin Section</a> |
+  <a routerLink="/admin/dashboard" routerLinkActive="active">Admin Dashboard</a> |
+  <a routerLink="/admin/users" routerLinkActive="active">Admin Users</a>
+</nav>
+<hr/>
+
+<router-outlet>
+  <button (click)="incrementCount()"> Clicks: {{clickCount}}</button>
+  <input (input)="onInput($event)" placeholder="Type Something...">
+  <hr>
+  <input [(ngModel)]="name" placeholder="Enter your name:">
+  <p>Your name is, {{name}}</p>
+  <input [(ngModel)]="email" placeholder="Enter your email:">
+  <p>Your email is, {{email}}</p>
+  <input [(ngModel)]="age" placeholder="Enter your age:">
+  <p>Your age is, {{age}}</p>
+  <input [(ngModel)]="address" placeholder="Enter your address:">
+  <p>Your address is, {{address}}</p>
+  <input [(ngModel)]="ehtnicity" placeholder="Enter your ethnicity:">
+  <p>Your ethnicity is, {{ehtnicity}}</p>
+  <button (click)="toggleModal()">Open Modal</button>
+
+
+<div *ngIf="showModal" class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="toggleModal()">&times;</span>
+    <h2>Modal Title</h2>
+    <p>Your name is, {{name}}</p>
+    <p>Your email is, {{email}}</p>
+    <p>Your age is, {{age}}</p>
+    <p>Your address is, {{address}}</p>
+    <p>Your ethnicity is, {{ehtnicity}}</p>
+    <button (click)="toggleModal()">Close Modal</button>
+  </div>
+</div>
+
+</router-outlet>
